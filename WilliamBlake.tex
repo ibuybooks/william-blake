@@ -1,0 +1,199 @@
+\documentclass[11pt]{memoir}
+
+% ——————— PAGE & TYPEBLOCK LAYOUT ———————
+\setstocksize{8.5in}{5.5in}
+\settrimmedsize{\stockheight}{\stockwidth}{*}
+\setlrmarginsandblock{0.75in}{0.5in}{*}
+\setulmarginsandblock{0.75in}{0.75in}{*}
+\checkandfixthelayout
+
+% ——————— FONTS & MICROTYPOGRAPHY ———————
+\usepackage[USenglish]{babel}
+\usepackage[autostyle, english=american]{csquotes}
+\usepackage{microtype}
+\usepackage{fontspec}
+\setmainfont{EBGaramond}[
+    Path = "font/EBGaramond/",
+    Extension = .ttf,
+    UprightFont = EBGaramond-Regular,
+    BoldFont = EBGaramond-Bold,
+    ItalicFont = EBGaramond-Italic,
+    BoldItalicFont = EBGaramond-BoldItalic,
+    FontFace = {m}{n}{EBGaramond-Medium},
+    FontFace = {m}{it}{EBGaramond-MediumItalic},
+    FontFace = {sb}{n}{EBGaramond-SemiBold},
+    FontFace = {sb}{it}{EBGaramond-SemiBoldItalic},
+    FontFace = {eb}{n}{EBGaramond-ExtraBold},
+    FontFace = {eb}{it}{EBGaramond-ExtraBoldItalic},
+]
+
+% ——————— PARAGRAPH & LINE SETTINGS ———————
+\clubpenalty=10000
+\widowpenalty=10000
+
+% —————— CHAPTER & SECTION STYLE ——————
+\chapterstyle{dash}
+
+\setsecheadstyle{\scshape\centering}
+\setsubsecheadstyle{\scshape\centering}
+\setsubsubsecheadstyle{\scshape\centering}
+
+% —————— PAGE STYLE & SETUP ——————
+\makeoddfoot{plain}{}{}{\thepage}
+\makepagestyle{style}
+\makeoddhead{style}{\scshape William Blake and the Mysticisms of Sense and Non-Sense}{}{}
+\makeevenhead{style}{}{}{\scshape William Blake and the Mysticisms of Sense and Non-Sense}
+\makeoddfoot{style}{}{}{\thepage}
+\makeevenfoot{style}{\thepage}{}{}
+\pagestyle{style}
+
+\renewcommand{\thechapter}{\Roman{chapter}}
+\renewcommand{\thesection}{\Roman{section}}
+
+\makeatletter
+\let\@afterindentfalse\@afterindenttrue
+\@afterindenttrue
+\makeatother
+
+\renewcommand{\thepage}{%
+    \ifnum\value{page}<7
+    \else
+        \number\numexpr\value{page}-6\relax
+    \fi
+}
+
+\setlength{\topskip}{0pt}
+
+\usepackage{perpage}
+\MakePerPage[2]{footnote}
+
+\usepackage[splitrule]{footmisc}
+
+\setlength{\skip\footins}{1.5\baselineskip}
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\usepackage{pdfpages}
+
+\setlength{\afterchapskip}{1.5\baselineskip}
+
+\setaftersecskip{0.5\baselineskip}
+\setaftersubsecskip{0.5\baselineskip}
+
+\abnormalparskip{1ex plus 0.5ex minus 0.25ex}
+
+% —————— HYPERREF OPTIONS ——————
+\usepackage{hyperref}
+\hypersetup{
+  hidelinks
+}
+
+% —————— TABLE OF CONTENTS OPTIONS ——————
+\renewcommand*{\cftchapterfont}{\normalfont}
+\renewcommand*{\cftchapterpagefont}{\normalfont}
+
+\renewcommand{\cftdotsep}{1}
+
+\setcounter{tocdepth}{3}
+
+\cftsetindents{subsection}{4\cftsectionindent}{0pt}
+
+% —————— BIBLIOGRAPHY OPTIONS ——————
+\usepackage[
+  style=numeric,
+  refsegment=chapter,
+  defernumbers=true,
+  sorting=none
+]{biblatex}
+
+\DeclareBibliographyCategory{cited}
+\AtEveryCitekey{\addtocategory{cited}{\thefield{entrykey}}}
+
+\addbibresource{frontback/bibliography.bib}
+
+\DeclareCiteCommand{\supercite}[\mkbibsuperscript]
+  {\usebibmacro{citeindex}%
+  \bibopenbracket}
+  {\usebibmacro{cite}}
+  {\supercitedelim}
+  {\bibclosebracket}
+
+% —————— CUSTOM COMMANDS ——————
+\usepackage{adjustbox}
+\usepackage{tikz}
+\usepackage{xparse}
+\usepackage{varwidth}
+
+\makeatletter
+\newcommand{\quotebox}[2][2em]{%
+  \par
+  \medskip
+  \begingroup
+  \centering
+  \begin{adjustbox}{}%
+    \adjustbox{center,minipage=0.9\linewidth,gstore totalheight=\@tempdima}{\setlength{\parindent}{17pt}#2}%
+    \adjustbox{rlap,raise=\dimexpr 0.5\@tempdima - #1 \relax,scale={-1}{-1}}{\Huge``}%
+    \hspace{-\linewidth}%
+    \adjustbox{rlap,raise=0.5\@tempdima-1.5em,left=\linewidth}{\Huge``}%
+  \end{adjustbox}%
+  \par
+  \medskip
+  \endgroup
+}
+\makeatother
+
+\NewDocumentCommand{\poembox}{O{2em} m}{%
+    \begingroup
+    \medskip
+    \centering
+    \begin{tikzpicture}
+        \node[inner sep=0pt, anchor=south west] (poem) at (0,0) {\begin{varwidth}{\linewidth}\raggedright #2\end{varwidth}};
+        \node[anchor=south east] at ([yshift=\dimexpr-2em+1ex]poem.north west) {\Huge``};
+        \node[anchor=north west] at ([yshift=#1]poem.south east) {\scalebox{-1}[-1]{\Huge``}};
+    \end{tikzpicture}%
+    \par
+    \medskip
+    \endgroup
+}
+
+\newcommand{\blankpage}[1][1]{%
+    \newcount\pagecount%
+    \pagecount=#1%
+    \loop%
+        \ifnum\pagecount > 0%
+            \clearpage%
+            \thispagestyle{empty}%
+            \null%
+            \clearpage
+            \advance\pagecount by -1%
+    \repeat%
+}
+
+% —————— MAIN DOCUMENT ——————
+\begin{document}
+  \nocite{*}
+  \includepdf[
+    pages=1,
+    pagecommand={\thispagestyle{empty}},
+    fitpaper=true
+  ]{frontback/front-cover.pdf}
+  \blankpage
+  \input{frontback/title}
+  \blankpage
+  \input{frontback/toc}
+  \blankpage
+  \input{chapters/chapter-one}
+  \input{chapters/chapter-two}
+  \input{chapters/chapter-three}
+  \chapter{Bibliography}
+  \nobibintoc
+  \printbibliography[category=cited, heading=subbibliography, title={Works Cited}]
+  \nobibintoc
+  \printbibliography[notcategory=cited, heading=subbibliography, title={Works Consulted}]
+  \blankpage
+  \includepdf[
+    pages=1,
+    pagecommand={\thispagestyle{empty}},
+    fitpaper=true
+  ]{frontback/back-cover.pdf}
+\end{document} 
