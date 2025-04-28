@@ -14,7 +14,7 @@ You can download the latest pre-built PDF release here: https://github.com/ibuyb
 - Required Packages: `memoir`, `babel`, `csquotes`, `microtype`, `fontspec`, `perpage`, `footmisc`, `pdfpages`, `hyperref`, `biblatex`, `adjustbox`, `tikz`, `xparse`, `varwidth`
 
 #### Steps
-1. Clone the repository:
+1. Clone the Repository:
    ```bash
    git clone https://github.com/ibuybooks/william-blake.git
    ```
