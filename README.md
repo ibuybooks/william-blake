@@ -6,7 +6,7 @@ A LuaLaTeX Remaster of Dr. Raymond F. Peat's Master Thesis, Presented to the Uni
 
 ## Downloads
 
-You can download the latest pre-built PDF release here: https://github.com/ibuybooks/william-blake/releases/latest
+You Can Download the Latest Pre-Built PDF Release Here: https://github.com/ibuybooks/william-blake/releases/latest
 
 ## Compiling
 #### Requirements
