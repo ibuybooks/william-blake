@@ -2,7 +2,7 @@
 
 #### A Master of Arts Thesis, University of Oregon, 1960
 
-A LuaLaTeX Remaster of Dr. Raymond F. Peat's Master Thesis, presented to the University of Oregon in June of 1960.
+A LuaLaTeX Remaster of Dr. Raymond F. Peat's Master Thesis, Presented to the University of Oregon in June of 1960.
 
 ## Downloads
 
