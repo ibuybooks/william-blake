@@ -13,7 +13,7 @@
 *Originally Published by Dr. Raymond F. Peat, Ph.D. in 1960.*
 
 Now Available as a High-Quality (Lua)LateX Remaster!<br>
-This Project is a Remaster of Dr. Peat's Master Thesis, with Clean Text, and Proper Formatting.
+This Project is a Remaster of Dr. Peat's Master Thesis, with Clean Text and Proper Formatting.
 
 ## ⚡ Download
 For Immediate Access to the Latest Release, See Here: [Download the Latest Release](https://github.com/ibuybooks/william-blake/releases/latest).
