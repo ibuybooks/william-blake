@@ -12,7 +12,7 @@
 **William Blake and the Mysticisms of Sense and Non-Sense**<br>
 *Originally Published by Dr. Raymond F. Peat, Ph.D. in 1960.*
 
-Now Available as a High-Quality (Lua)LateX Remaster!<br>
+Now Available as a High-Quality (Lua)LaTeX Remaster!<br>
 This Project is a Remaster of Dr. Peat's Master Thesis, with Clean Text and Proper Formatting.
 
 ## ⚡ Download
