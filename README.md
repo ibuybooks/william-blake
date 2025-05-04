@@ -7,7 +7,6 @@
 [![Lua](https://img.shields.io/badge/Lua-2C2D72?style=flat&logo=lua&logoColor=white)](#)
 [![Size](https://img.shields.io/github/repo-size/ibuybooks/william-blake?label=Size&logo=github&logoColor=white&labelColor=282828&color=007bff&style=flat)](#)
 [![License](https://img.shields.io/badge/Free%20for%20Non--Commercial%20Use-007bff?label=License&style=flat&logo=github&logoColor=white&labelColor=282828&color=007bff)](#)
-[![Heart](https://img.shields.io/badge/Made%20With-%E2%9D%A4-red?style=flat&logo=heart&logoColor=white&labelColor=282828&color=red)](#)
 
 >"What Is Now Proved Was Once Only imagined."  
 >— William Blake
@@ -44,17 +43,22 @@ For Release History, Additional Details, or Other Downloads, Please Visit the Re
 - `varwidth`
 
 #### Instructions:
+##### Clone the Project:
 ```bash
-# Clone the Project:
 git clone https://github.com/ibuybooks/william-blake.git
 cd william-blake
-
-# Compile the Document:
+```
+##### Compile the Document:
+```bash
 lualatex WilliamBlake
+```
 
-# Process the Bibliography:
+##### Process the Bibliography:
+```bash
 biber WilliamBlake
+```
 
-# Compile with the Bibiography:
+##### Compile with the Bibiography:
+```bash
 lualatex WilliamBlake
 ```
