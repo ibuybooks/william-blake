@@ -1,32 +1,60 @@
-## William Blake and the Mysticisms of Sense and Non-Sense
+# William Blake and the Mysticisms of Sense and Non-Sense
+<img src="https://github.com/user-attachments/assets/dd6df2d6-9d3a-4841-bccd-19ed081f35ba" align="left"
+     alt="Front Cover" width="135" height="210">
 
-#### A Master of Arts Thesis, University of Oregon, 1960
+[![Follow](https://img.shields.io/badge/Follow%20%40ibuybooks-000000?logo=X&logoColor=white&style=flat)](https://x.com/ibuybooks)
+[![LaTeX](https://img.shields.io/badge/LaTeX-008080?style=flat&logo=latex&logoColor=white)](#)
+[![Lua](https://img.shields.io/badge/Lua-2C2D72?style=flat&logo=lua&logoColor=white)](#)
+[![Size](https://img.shields.io/github/repo-size/ibuybooks/william-blake?label=Size&logo=github&logoColor=white&labelColor=282828&color=007bff&style=flat)](#)
+[![License](https://img.shields.io/badge/Free%20for%20Non--Commercial%20Use-007bff?label=License&style=flat&logo=github&logoColor=white&labelColor=282828&color=007bff)](#)
+[![Heart](https://img.shields.io/badge/Made%20With-%E2%9D%A4-red?style=flat&logo=heart&logoColor=white&labelColor=282828&color=red)](#)
 
-A LuaLaTeX Remaster of Dr. Raymond F. Peat's Master Thesis, Presented to the University of Oregon in June of 1960.
+>"What Is Now Proved Was Once Only imagined."  
+>— William Blake
 
-## Downloads
+**William Blake and the Mysticisms of Sense and Non-Sense**<br>
+*Originally Published by Dr. Raymond F. Peat, Ph.D. in 1960.*
 
-You Can Download the Latest Pre-Built PDF Release Here: https://github.com/ibuybooks/william-blake/releases/latest
+Now Available as a High-Quality (Lua)LateX Remaster!<br>
+This Project is a Faithful, Archival-Quality Remaster of Dr. Peat's Master Thesis, with Clean Text, and Proper Formatting.
 
-## Compiling
-#### Requirements
-- LaTeX Distribution (e.g., TeX Live, MikTeX)
-- Required Packages: `memoir`, `babel`, `csquotes`, `microtype`, `fontspec`, `perpage`, `footmisc`, `pdfpages`, `hyperref`, `biblatex`, `adjustbox`, `tikz`, `xparse`, `varwidth`
+## ⚡ Download
+For Immediate Access to the Latest Release, See Here: [Download the Latest Release](https://github.com/ibuybooks/william-blake/releases/latest).
 
-#### Steps
-1. Clone the Repository:
-   ```bash
-   git clone https://github.com/ibuybooks/william-blake.git
-   ```
-2. Navigate to the Repository Directory:
-   ```bash
-   cd william-blake
-   ```
-4. Run the Following (in Sequence):
-   ```bash
-   lualatex WilliamBlake
-   biber WilliamBlake
-   lualatex WilliamBlake
-   ```
+For Release History, Additional Details, or Other Downloads, Please Visit the Releases Tab.
 
+## 🛠️ Building from Source
+#### Build Requirements:
+- A LaTeX Distribution (e.g., TeX Live, MikTeX).
 
+#### Package Requirements:
+- `memoir`
+- `babel`
+- `csquotes`
+- `microtype`
+- `fontspec`
+- `perpage`
+- `footmisc`
+- `pdfpages`
+- `hyperref`
+- `biblatex`
+- `adjustbox`
+- `tikz`
+- `xparse`
+- `varwidth`
+
+#### Instructions:
+```bash
+# Clone the Project:
+git clone https://github.com/ibuybooks/william-blake.git
+cd william-blake
+
+# Compile the Document:
+lualatex WilliamBlake
+
+# Process the Bibliography:
+biber WilliamBlake
+
+# Compile with the Bibiography:
+lualatex WilliamBlake
+```
