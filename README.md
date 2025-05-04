@@ -5,7 +5,6 @@
 [![Follow](https://img.shields.io/badge/Follow%20%40ibuybooks-000000?logo=X&logoColor=white&style=flat)](https://x.com/ibuybooks)
 [![LaTeX](https://img.shields.io/badge/LaTeX-008080?style=flat&logo=latex&logoColor=white)](#)
 [![Lua](https://img.shields.io/badge/Lua-2C2D72?style=flat&logo=lua&logoColor=white)](#)
-[![Size](https://img.shields.io/github/repo-size/ibuybooks/william-blake?label=Size&logo=github&logoColor=white&labelColor=282828&color=007bff&style=flat)](#)
 [![License](https://img.shields.io/badge/Free%20for%20Non--Commercial%20Use-007bff?label=License&style=flat&logo=github&logoColor=white&labelColor=282828&color=007bff)](#)
 
 >"What Is Now Proved Was Once Only imagined."  
