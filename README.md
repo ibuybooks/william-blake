@@ -17,7 +17,7 @@
 
   <br>
 
-  >*"What Is Now Proved Was Once Only imagined."*
+  >*"In the universe, there are things that are known, and things that are unknown, and in between, there are doors."*
   >
   > — William Blake
 </div>
